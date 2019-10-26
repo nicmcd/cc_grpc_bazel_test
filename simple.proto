@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package simple;
+
+service Greeter {
+  rpc SayHello (SimpleRequest) returns (SimpleReply) {}
+}
+
+message SimpleRequest {
+  string name = 1;
+  int32 id = 2;
+}
+
+message SimpleReply {
+  string name = 1;
+  int32 id = 2;
+  string greeting = 3;
+}
